@@ -1,0 +1,24 @@
+def fib():
+        k=1
+        n=int(input())
+        l=[]
+        f=[]
+        j,c=0,0
+        for i in range(n):
+            v=float(input())
+            if v<0:
+                print("Invalid Input")
+            else:
+                l.append(v)
+        while k<max(l)+1:
+            c=j+k
+            f.append(c)
+            j=k
+            k=c
+        for i in l:
+            s=0
+            for j in f:
+                if j<=i and j%2==0:
+                    s+=j
+            print(s)
+fib()
