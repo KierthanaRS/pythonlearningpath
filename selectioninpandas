@@ -1,0 +1,19 @@
+import pandas as pd
+# Selection method
+#two methods- loc and iloc
+s=pd.Series([1,2,3,4,5],index=['a','b','c','d','e'])
+#iloc
+print(s.iloc[:3])# access can only be done using position.
+print(s.iloc[::-1])#cannot use labelled index
+print(s.iloc[[2,3]])#get rows at particular position in the index.
+
+#loc
+print(s.loc[:'c'])# accessed can only be done using labelled index.  
+
+
+#summarising
+''' +Slicing (positon as well as index)
+    +iloc(position)
+    +loc(labelled index)
+    +indexsing'''
+
