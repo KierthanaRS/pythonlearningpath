@@ -1,0 +1,15 @@
+import pandas as pd
+n=int(input("N:"))
+dic={}
+values_sales=[]
+values_name=[]
+for i in range(n):
+    item_n=input('enter name of item')
+    sales=int(input('enter sales made of item'))
+    values_sales.append(sales)
+    values_name.append(item_n)
+dic['Name ']=values_name
+dic['sales']=values_sales
+dframe=pd.DataFrame(dic)
+print(dframe)
+dframe.to_csv('csv file',sep='@')
