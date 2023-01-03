@@ -1,0 +1,19 @@
+import tkinter as tk
+window=tk.Tk()
+#To name/rename the title of the window
+
+window.title("GUI")
+
+label=tk.Label(window,text='Welcome to Tkinter').pack()
+window.mainloop()
+
+#Label-to display a text
+l1=tk.Label(window,text="EUREKA!" ,font=("Algerian Bold",25))
+window.geometry('300x250')#to have a fixed window size
+l1.grid(column=0,row=0)
+
+#Button
+bt=tk.Button(window,text='Enter',bg='orange',fg='red',command=window.destroy)
+bt.grid(column=1,row=0)
+bt.pack(side='bottom')#set the position of the button
+
