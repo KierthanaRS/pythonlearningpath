@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+pl=['Java','Python','PHP','JavaScript','C#','C++']
+p=[22.2,17.6,8.8,7.7,6.7,23.5]
+plt.bar(pl,p,color=['k','b','c','m','g','r'])
+plt.show()
+#2
+plt.bar(pl,p,color=['k','b','c','m','g','r'],width=[0.2,0.5,0.6,0.8,2,0.4])
+plt.show()
+#3
+g=['G1','G2','G3','G4','G5']
+m_m=[22,30,35,35,26]
+m_w=[25,32,30,35,29]
+df3=pd.DataFrame()
+df3['Gender']=g
+df3['men']=m_m
+df3['Women']=m_w
+df3.plot(kind='bar',x='Gender')
+plt.show()
