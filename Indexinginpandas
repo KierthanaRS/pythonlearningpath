@@ -1,0 +1,23 @@
+import pandas as pd
+s=pd.Series([1,2,3,4,5],index=[10,11,12,13,14])
+print(s[0:5:2])
+# negative indexing
+print(s[-4:])
+print(s[-4:-1:1])
+print(s[-3:1])
+print(s[::-1])# reverse direction
+print(s[3:1:-1])
+print(s[4::-2])
+# if both index and value are numbers, then u can't slice using the data lable,you can only use position.
+s=pd.Series([1,2,3,4,5],index=['a','b','c','d','e'])
+print(s['a':'e'])#till end
+print(s['a':])
+print(s['a'::2])
+print(s['a':'d':2])
+print(s['e':'a':-1])
+
+s[1:4]=50
+print(s)
+
+s[1:4]=[50,60,70]
+print(s)
