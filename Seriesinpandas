@@ -1,0 +1,12 @@
+import pandas as pd
+
+#1
+s=pd.Series([2,3,5,8,7,9],index=['p','q','r','s','t','u'])
+print(s)
+#2
+s.index=['q','s','u','p','t','r']
+print(s)
+#3
+s1=pd.Series([5,7,9,11],index=[0,1,2,3])
+s2=s1**2
+print(s2[s2>30])
